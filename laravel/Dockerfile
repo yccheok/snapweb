@@ -10,7 +10,7 @@ RUN composer install
 
 RUN apk update && \
     apk add postgresql-dev && \
-	apk add nodejs && \
+    apk add nodejs && \
     apk add autoconf gcc make libpng-dev
 
 RUN docker-php-ext-install pdo_pgsql
