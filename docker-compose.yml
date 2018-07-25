@@ -1,0 +1,20 @@
+version: '2'
+services:
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+     - "2053:80"
+    volumes_from:
+     - laravel
+
+  laravel:
+    build:
+      context: ./laravel
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./laravel:/var/www
