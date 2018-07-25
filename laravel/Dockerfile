@@ -15,6 +15,6 @@ RUN apk update && \
 
 RUN docker-php-ext-install pdo_pgsql
 
-#RUN npm install
+RUN npm install
 
 CMD ["php-fpm", "-F"]
